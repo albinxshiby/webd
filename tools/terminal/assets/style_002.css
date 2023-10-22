@@ -1,0 +1,47 @@
+.header__logo::after {
+    background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 4px, transparent 0, transparent 10px);
+    animation: cursor 5s infinite;
+    animation-timing-function: linear
+}
+
+:root {
+    --accent: #ffa86a;
+    --background: #222129 !important;
+    --color: white;
+    --border-color: rgba(255, 255, 255, .1)
+}
+
+body {
+    color: white;
+}
+
+.blink_logo {
+    animation: blink 1s infinite;
+    animation-timing-function: linear;
+    font-weight: 800;
+    padding-right: 5px
+}
+
+@keyframes blink {
+    0% {
+        color: var(--accent)
+    }
+
+    100% {
+        color: red
+    }
+}
+
+@keyframes cursor {
+    0% {
+        width: 0
+    }
+
+    50% {
+        width: 90%
+    }
+
+    100% {
+        width: 0
+    }
+}
